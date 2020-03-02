@@ -15,6 +15,40 @@ Vue (读音 /vjuː/，类似于 **view**) 是一套用于构建用户界面的**
 
 如果你已经是有经验的前端开发者，想知道 Vue 与其它库/框架有哪些区别，请查看[对比其它框架](comparison.html)。
 
+## 试一试
+
+将下面的代码保存为 index.html 用浏览器打开：
+
+```html
+<html>
+<head>
+<!-- 引用Vue -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+	
+	<div id="app-2" style="width:100%;margin:20px auto;">
+	  <span v-bind:title="message">
+	    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+	  </span>
+	</div>
+
+
+	<script>
+	var app2 = new Vue({
+	  el: '#app-2',
+	  data: {
+	    message: '页面加载于 ' + new Date().toLocaleString()
+	  }
+	})
+	</script>
+
+</body>
+<html>
+```
+
+
 ## 起步
 
 <div class="vueschool"><a href="https://learning.dcloud.io/#/?vid=1" target="_blank" rel="sponsored noopener" title="Vue.js 教程 - 安装与部署">观看本节视频讲解</a></div>
